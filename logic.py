@@ -24,3 +24,7 @@ def redirection_page(short_name):
     else:
         return redirect(page_from_db)
 
+
+@app.route('/')
+def welcome():
+    return "This is a url redirecting application"
