@@ -1,8 +1,8 @@
-from flask import Flask
+from flask import Flask, redirect
 
 url_dict = {
-    'google': 'google.com',
-    'example': 'example.com'
+    'google': 'https://google.com',
+    'example': 'https://example.com'
 }
 
 
@@ -22,5 +22,5 @@ def redirection_page(short_name):
     if not page_from_db:
         return '404'
     else:
-        return page_from_db
+        return redirect(page_from_db)
 
