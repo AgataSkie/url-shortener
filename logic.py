@@ -1,4 +1,4 @@
-from flask import Flask, redirect
+from flask import Flask, redirect, render_template
 
 url_dict = {
     'google': 'https://google.com',
@@ -20,11 +20,11 @@ def get_page(short_name):
 def redirection_page(short_name):
     page_from_db = get_page(short_name)
     if not page_from_db:
-        return '404'
+        return render_template('404.html'), 404
     else:
         return redirect(page_from_db)
 
 
 @app.route('/')
 def welcome():
-    return "This is a url redirecting application"
+    return render_template('welcome.html')
