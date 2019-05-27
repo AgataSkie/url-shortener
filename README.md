@@ -5,6 +5,10 @@ This is an excercise, created to practice Flask. This app is far from ready and 
 
 
 #### List of features to add / to do:
+*TESTS*
+* test redirection
+* test error pages
+
 *DB*
 * configure a db
 * use db to search for urls
